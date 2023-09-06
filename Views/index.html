@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+    body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+    .container {
+    text-align: center;
+    }
+    input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    }
+    button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #199319;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Test de Zarruk</h1>
+        <form id="nameForm">
+            <input type="text" id="nameInput" placeholder="Ingrese su nombre">
+            <br><br>
+            <button type="submit">Comenzar Test</button>
+        </form>
+    </div>
+<script>
+    document.getElementById("nameForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("nameInput").value;
+    // Redirige a la página de preguntas
+    window.location.href = "test.html"; // Reemplaza "preguntas.html" con la URL de tu página de preguntas
+});
+</script>
+</body>
+</html>
+</body>
+</html>
