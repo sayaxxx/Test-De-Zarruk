@@ -1,3 +1,4 @@
+/* Estilos para las preguntas */
 body {
     background-color: bisque;
     display: flex;
@@ -13,8 +14,14 @@ body {
 }
 
 .question {
-    margin: 20px 0;
-    max-width: 600px;
+    display: none; /* Oculta todas las preguntas por defecto */
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
 .question p {
@@ -24,18 +31,6 @@ body {
 }
 
 .question label {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* Estilos responsivos para preguntas */
-@media (max-width: 600px) {
-    .question {
-        text-align: center;
-    }
-
-    .question label {
-        display: block;
-        margin-bottom: 10px;
-    }
+    display: block;
+    margin-bottom: 10px;
 }
