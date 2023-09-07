@@ -60,12 +60,48 @@ questions.forEach((question, index) => {
 
             // Mostrar la siguiente pregunta
             showNextQuestion(index + 1);
+            preguntasRespondidas += 1
 
             // Calcular los puntos al responder
             calcularPuntos();
         });
     });
 });
+
+// Inicializa un contador para preguntas respondidas
+var preguntasRespondidas = 0;
+
+// Agrega un evento de escucha para todas las opciones de respuesta
+var opcionesRespuesta = document.querySelectorAll('input[type="radio"]');
+opcionesRespuesta.forEach(function(opcion) {
+    opcion.addEventListener('change', function() {
+        // Marca la pregunta como respondida cuando se selecciona una opción
+        opcion.setAttribute('data-answered', 'true');
+        
+        // Verifica si todas las preguntas han sido respondidas
+        preguntasRespondidas = document.querySelectorAll('input[type="radio"][data-answered="true"]').length;
+        if (preguntasRespondidas === 20) {
+            // Todas las preguntas han sido respondidas, puedes hacer algo aquí
+            console.log("Todas las preguntas han sido respondidas.");
+
+            const puntosTexto = document.getElementById("puntosText");
+            if (puntos >=0 && puntos <=35){
+                puntosTexto.textContent =  `El Infierno
+                Está rajado. Si tiene productos o servicios con poca generación de caja, que cosumen gran cantidad de capital de trabajo y tiene alto endeudamiento, por favor, consulte con un asesor financiero antes de que se quiebre. Si no tiene problemas de liquidez, dele gracias a los dioses del olimpo financiero, seguramente tiene productos y servicios con muy buena generacion de caja.`
+            } 
+        }
+    });
+});
+
+if (preguntasRespondidas === 20){
+    const puntosText = document.getElementById("puntosTotales");
+    if (puntos >=0 && puntos <=35){
+        puntosText.textContent =  `El Infierno
+        Está rajado. Si tiene productos o servicios con poca generación de caja, que cosumen gran cantidad de capital de trabajo y tiene alto endeudamiento, por favor, consulte con un asesor financiero antes de que se quiebre. Si no tiene problemas de liquidez, dele gracias a los dioses del olimpo financiero, seguramente tiene productos y servicios con muy buena generacion de caja.`
+    }
+}
+
+
 
 // Mostrar la primera pregunta al cargar la página
 showNextQuestion(0);
