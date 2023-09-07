@@ -45,7 +45,7 @@ function calcularPuntos() {
     // Actualizar el contador de puntos en la página
     const puntosContainer = document.getElementById("puntos");
     if (puntosContainer) {
-        puntosContainer.textContent = `Puntos: ${puntos}`;
+        puntosContainer.textContent = `Total Puntos: ${puntos}`;
     }
 }
 
