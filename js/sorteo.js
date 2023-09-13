@@ -5,6 +5,8 @@ document.getElementById('startDraw').addEventListener('click', async function() 
     let winner = names[Math.floor(Math.random() * names.length)];
 
     document.getElementById('winnerName').textContent = winner;
+    console.log(names)
+    console.log(winner)
 });
 
 async function fetchNamesFromNetlify() {
