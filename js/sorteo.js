@@ -1,12 +1,14 @@
 document.getElementById('startDraw').addEventListener('click', async function() {
-
     let names = await fetchNamesFromNetlify();
-    
+
+    if (names.length === 0) {
+        alert("No hay nombres para sortear.");
+        return;
+    }
+
     let winner = names[Math.floor(Math.random() * names.length)];
 
     document.getElementById('winnerName').textContent = winner;
-    console.log(names)
-    console.log(winner)
 });
 
 async function fetchNamesFromNetlify() {
@@ -14,5 +16,10 @@ async function fetchNamesFromNetlify() {
     let response = await fetch(endpoint);
     let data = await response.json();
 
-    return data.map(entry => entry.data.userName);
+    let names = data.map(entry => entry.data.userName);
+    
+    let uniqueNames = [...new Set(names)];
+
+    return uniqueNames;
 }
+
