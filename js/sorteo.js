@@ -8,7 +8,7 @@ document.getElementById('startDraw').addEventListener('click', async function() 
 });
 
 async function fetchNamesFromNetlify() {
-    const endpoint = 'https://api.netlify.com/api/v1/forms/TU_FORM_ID/submissions?access_token=TU_NETLIFY_TOKEN';
+    const endpoint = 'https://api.netlify.com/api/v1/forms/650001eb1c9d9b00083dd503/submissions?access_token=Qqj7j74jqsPbnaJpnsrOQPJFREXWEd71g9AO7Pfaokc';
     let response = await fetch(endpoint);
     let data = await response.json();
 
