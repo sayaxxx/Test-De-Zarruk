@@ -72,6 +72,9 @@ opcionesRespuesta.forEach(function(opcion) {
             console.log("Todas las preguntas han sido respondidas.");
             const puntosTexto = document.getElementById("puntosText");
 
+            const btnRetryTest = document.querySelector("#retryTest");
+            btnRetryTest.style.display = "block";
+
             const resultadoElement = document.querySelector(".resultado");
             resultadoElement.style.display = "block";
 
@@ -90,5 +93,10 @@ opcionesRespuesta.forEach(function(opcion) {
         }
     });
 });
+
+document.getElementById("retryTest").addEventListener("click", function() {
+    location.reload();
+});
+
 
 showNextQuestion(0);
