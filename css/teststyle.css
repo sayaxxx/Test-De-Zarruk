@@ -53,3 +53,24 @@ h2{
     margin-bottom: 20px;
 }
 
+#retryTest {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#retryTest:hover {
+    background-color: #2980b9;
+}
+
+
