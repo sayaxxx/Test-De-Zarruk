@@ -16,9 +16,9 @@
     <div class="container">
         <h1>Test de Zarruk</h1>
         <form name="nameForm" method="POST" data-netlify="true" action="./test.html" id="nameForm">
-            <input type="text" id="nameInput" name="userName" required placeholder="Ingrese su nombre">
+            <input type="text" id="nameInput" name="userName" required pattern="[A-Za-z\s]+" placeholder="Ingrese su nombre" title="Por favor, ingrese sólo letras y espacios.">
             <br><br>
-            <input type="text" id="phoneInput" name="userPhone" required placeholder="Ingrese su teléfono">
+            <input type="text" id="phoneInput" name="userPhone" required pattern="\d+" placeholder="Ingrese su teléfono" title="Por favor, ingrese sólo números.">
             <br><br>
             <input type="text" id="companyInput" name="userCompany" required placeholder="Ingrese el nombre empresa">
             <br><br>
